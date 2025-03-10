@@ -1,0 +1,164 @@
+{
+  "home": {
+    "hero": {
+      "title": "DUNE Training Experience Hub",
+      "tagline": "Advancing neutrino physics research through education, collaboration, and cutting-edge tools."
+    },
+    "quickLinks": [
+      {
+        "title": "DUNE Catalog",
+        "description": "Access DUNE datasets and metadata",
+        "icon": "Database",
+        "href": "https://dune-tech.rice.edu/dunecatalog/",
+        "external": true
+      },
+      {
+        "title": "JupyterHub",
+        "description": "Run notebooks on DUNE servers",
+        "icon": "Server",
+        "href": "https://dune-tech.rice.edu/jupyterhub/",
+        "external": true
+      },
+      {
+        "title": "Team",
+        "description": "Meet the DUNE collaboration team",
+        "icon": "Users",
+        "href": "/team",
+        "external": false
+      },
+      {
+        "title": "Services",
+        "description": "Explore all available DUNE services",
+        "icon": "Atom",
+        "href": "/services",
+        "external": false
+      }
+    ],
+    "latestUpdates": [
+      {
+        "title": "New DUNE Catalog Release",
+        "date": "March 2025",
+        "description": "i am a description"
+      },
+      {
+        "title": "New DUNE JupyterHub Release",
+        "date": "March 2025",
+        "description": "i am a description"
+      }
+    ],
+    "resources": [
+      {
+        "title": "Documentation",
+        "description": "Comprehensive guides for DUNE tools and services",
+        "icon": "BookOpen"
+      },
+      {
+        "title": "Event Calendar",
+        "description": "Stay updated with upcoming workshops and seminars",
+        "icon": "Calendar"
+      }
+    ],
+    "about": {
+      "title": "About DUNE",
+      "paragraphs": [
+        "The Deep Underground Neutrino Experiment (DUNE) is a leading-edge, international experiment for neutrino science and proton decay studies. The DUNE Training Experience Hub provides resources, training, and collaboration opportunities for researchers, students, and enthusiasts interested in neutrino physics and the DUNE experiment.",
+        "Based at Rice University, this hub serves as a central access point for DUNE-related tools, datasets, and educational resources."
+      ],
+      "officialWebsite": "https://www.dunescience.org/"
+    }
+  },
+  "team": {
+    "title": "Our Team",
+    "subtitle": "Meet the researchers and developers behind the DUNE Training Experience Hub.",
+    "members": [
+      {
+        "name": "Name1",
+        "role": "Role",
+        "image": "/team/placeholder.jpg",
+        "bio": "Bio"
+      },
+      {
+        "name": "Name2",
+        "role": "Role",
+        "image": "/team/placeholder.jpg",
+        "bio": "Bio"
+      },
+      {
+        "name": "Name3",
+        "role": "Role",
+        "image": "/team/placeholder.jpg",
+        "bio": "Bio"
+      },
+      {
+        "name": "Name4",
+        "role": "Role",
+        "image": "/team/placeholder.jpg",
+        "bio": "Bio"
+      }
+    ]
+  },
+  "services": {
+    "title": "DUNE Services",
+    "subtitle": "Access key DUNE services and resources to support your research and learning.",
+    "mainServices": [
+      {
+        "title": "DUNE Catalog",
+        "description": "Query and access datasets from the DUNE Metacat database. Find experiment data, analysis results, and more.",
+        "icon": "Database",
+        "details": "The DUNE Catalog provides a user-friendly interface to search, filter, and download datasets from the DUNE experiment. Access metadata, file locations, and dataset descriptions to accelerate your research.",
+        "buttonText": "Access DUNE Catalog",
+        "buttonLink": "https://dune-tech.rice.edu/dunecatalog/"
+      },
+      {
+        "title": "JupyterHub",
+        "description": "Run Jupyter notebooks on the Rice DUNE server with pre-configured environments for data analysis.",
+        "icon": "Server",
+        "details": "JupyterHub provides a collaborative environment for data analysis, visualization, and machine learning. Access computing resources, shared libraries, and DUNE datasets directly from your browser.",
+        "buttonText": "Launch JupyterHub",
+        "buttonLink": "https://dune-tech.rice.edu/jupyterhub/"
+      }
+    ],
+    "additionalServices": [
+      {
+        "title": "Training Workshops",
+        "description": "Comprehensive workshops on neutrino physics, detector technology, and data analysis.",
+        "icon": "BookOpen"
+      },
+      {
+        "title": "Documentation",
+        "description": "Access to educational materials, publications, and learning resources for all levels.",
+        "icon": "BookOpen"
+      }
+    ]
+  },
+  "aboutNeutrinos": {
+    "title": "About Neutrinos",
+    "subtitle": "Learn about these fascinating subatomic particles and why they're important to physics.",
+    "introduction": "introduction",
+    "facts": [
+      {
+        "title": "What are Neutrinos?",
+        "content": "answer"
+      },
+      {
+        "title": "Neutrino Oscillations",
+        "content": "answer"
+      },
+      {
+        "title": "Why Study Neutrinos?",
+        "content": "answer"
+      },
+      {
+        "title": "The DUNE Experiment",
+        "content": "answer"
+      }
+    ],
+    "research": {
+      "title": "Neutrino Research at DUNE",
+      "paragraphs": [
+        "answer",
+        "answer"
+      ]
+    }
+  }
+}

@@ -1,101 +1,155 @@
-import Image from "next/image";
+import { DashboardLayout } from "@/components/layout/dashboard-layout";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Database, Server, BookOpen, Calendar, ExternalLink, Users, Atom, LucideIcon } from "lucide-react";
+import Link from "next/link";
+import siteContent from "@/data/site-content.json";
+import { ReactNode } from "react";
+
+// Define types for the JSON data
+interface IconMapType {
+  [key: string]: ReactNode;
+}
+
+// Icon mapping to dynamically render icons from the JSON data
+const IconMap: IconMapType = {
+  Database: <Database className="h-8 w-8 text-primary" />,
+  Server: <Server className="h-8 w-8 text-primary" />,
+  Users: <Users className="h-8 w-8 text-primary" />,
+  Atom: <Atom className="h-8 w-8 text-primary" />,
+  BookOpen: <BookOpen className="h-5 w-5 text-primary mt-0.5" />,
+  Calendar: <Calendar className="h-5 w-5 text-primary mt-0.5" />
+};
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  // Get home page content from the site content
+  const homeContent = siteContent.home;
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  // Helper function to get the icon component based on the icon name
+  const getIcon = (iconName: string): ReactNode => {
+    return IconMap[iconName] || null;
+  };
+
+  return (
+    <DashboardLayout>
+      <div className="space-y-8">
+        {/* Hero Section */}
+        <div className="relative rounded-lg overflow-hidden bg-gradient-to-r from-primary/10 to-primary/5 p-8">
+          <div className="max-w-3xl">
+            <h1 className="text-4xl font-bold tracking-tight mb-4">{homeContent.hero.title}</h1>
+            <p className="text-xl text-muted-foreground mb-6">
+              {homeContent.hero.tagline}
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Button asChild>
+                <Link href="/services">Explore Services</Link>
+              </Button>
+              <Button variant="outline" asChild>
+                <a href={homeContent.about.officialWebsite} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  Learn About DUNE <ExternalLink className="h-4 w-4" />
+                </a>
+              </Button>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        {/* Quick Access Links */}
+        <div>
+          <h2 className="text-2xl font-semibold mb-4">Quick Access</h2>
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            {homeContent.quickLinks.map((link) => (
+              <Card key={link.title} className="transition-all hover:shadow-md">
+                <CardHeader className="pb-2">
+                  <div className="flex items-center gap-3">
+                    {getIcon(link.icon)}
+                    <CardTitle className="text-lg">{link.title}</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription>{link.description}</CardDescription>
+                </CardContent>
+                <CardFooter>
+                  {link.external ? (
+                    <Button variant="ghost" size="sm" className="w-full justify-between" asChild>
+                      <a href={link.href} target="_blank" rel="noopener noreferrer" className="flex items-center">
+                        Open <ExternalLink className="h-4 w-4 ml-2" />
+                      </a>
+                    </Button>
+                  ) : (
+                    <Button variant="ghost" size="sm" className="w-full justify-between" asChild>
+                      <Link href={link.href} className="flex items-center">
+                        View <ArrowRight className="h-4 w-4 ml-2" />
+                      </Link>
+                    </Button>
+                  )}
+                </CardFooter>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* Information Sections */}
+        <div className="grid gap-6 md:grid-cols-2">
+          {/* Latest Updates Section */}
+          <Card className="h-full">
+            <CardHeader>
+              <CardTitle>Latest Updates</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                {homeContent.latestUpdates.map((update, index) => (
+                  <div key={index} className="border-l-4 border-primary pl-4 py-2">
+                    <p className="font-medium">{update.title}</p>
+                    <p className="text-sm text-muted-foreground">{update.date}</p>
+                    <p className="mt-1 text-sm">{update.description}</p>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Resources Section */}
+          <Card className="h-full">
+            <CardHeader>
+              <CardTitle>Resources</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-3">
+                {homeContent.resources.map((resource, index) => (
+                  <div key={index} className="flex items-start gap-2">
+                    {getIcon(resource.icon)}
+                    <div>
+                      <p className="font-medium">{resource.title}</p>
+                      <p className="text-sm text-muted-foreground">{resource.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* About DUNE */}
+        <div>
+          <Card>
+            <CardHeader>
+              <CardTitle>{homeContent.about.title}</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              {homeContent.about.paragraphs.map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
+            </CardContent>
+            <CardFooter>
+              <Button variant="outline" size="sm" asChild>
+                <a href={homeContent.about.officialWebsite} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  Visit Official DUNE Website <ExternalLink className="h-4 w-4" />
+                </a>
+              </Button>
+            </CardFooter>
+          </Card>
+        </div>
+      </div>
+    </DashboardLayout>
   );
 }
