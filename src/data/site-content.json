@@ -1,20 +1,13 @@
 {
   "home": {
     "hero": {
-      "title": "DUNE Training Experience Hub",
+      "title": "DUNE Training ExperienCe Hub",
       "tagline": "Advancing neutrino physics research through education, collaboration, and cutting-edge tools."
     },
     "quickLinks": [
       {
-        "title": "DUNE Catalog",
-        "description": "Access DUNE datasets and metadata",
-        "icon": "Database",
-        "href": "https://dune-tech.rice.edu/dunecatalog/",
-        "external": true
-      },
-      {
         "title": "JupyterHub",
-        "description": "Run notebooks on DUNE servers",
+        "description": "Run jupyter notebooks on DUNE-TECH server",
         "icon": "Server",
         "href": "https://dune-tech.rice.edu/jupyterhub/",
         "external": true
@@ -59,33 +52,32 @@
       }
     ],
     "about": {
-      "title": "About DUNE",
+      "title": "About DUNE-TECH",
       "paragraphs": [
-        "The Deep Underground Neutrino Experiment (DUNE) is a leading-edge, international experiment for neutrino science and proton decay studies. The DUNE Training Experience Hub provides resources, training, and collaboration opportunities for researchers, students, and enthusiasts interested in neutrino physics and the DUNE experiment.",
-        "Based at Rice University, this hub serves as a central access point for DUNE-related tools, datasets, and educational resources."
+        "The DUNE Training ExperienCe Hub (DUNE-TECH) provides resources, training, and collaboration opportunities for researchers, students, and enthusiasts interested in neutrino physics and the DUNE experiment. This program is supported by the Department of Energy, Office of Science, Office of High Energy Physics, award no. DE-SC0025419."
       ],
       "officialWebsite": "https://www.dunescience.org/"
     }
   },
   "team": {
     "title": "Our Team",
-    "subtitle": "Meet the researchers and developers behind the DUNE Training Experience Hub.",
+    "subtitle": "Meet the researchers and developers behind the DUNE Training ExperienCe Hub.",
     "members": [
       {
-        "name": "Name1",
-        "role": "Role",
+        "name": "Aaron Higuera",
+        "role": "Principal Investigator",
         "image": "/team/placeholder.jpg",
         "bio": "Bio"
       },
       {
-        "name": "Name2",
-        "role": "Role",
+        "name": "Christopher Tunnell",
+        "role": "co-PI",
         "image": "/team/placeholder.jpg",
         "bio": "Bio"
       },
       {
-        "name": "Name3",
-        "role": "Role",
+        "name": "Calvin Wong",
+        "role": "Web developr and server admin",
         "image": "/team/placeholder.jpg",
         "bio": "Bio"
       },
@@ -138,26 +130,25 @@
     "facts": [
       {
         "title": "What are Neutrinos?",
-        "content": "answer"
+        "content": "Neutrinos are tiny elemental particles that pass through everything, billions go through your body every second without you feeling a thing."
       },
       {
         "title": "Neutrino Oscillations",
-        "content": "answer"
+        "content": "Neutrino oscillations are a strange quantum effect where neutrinos change from one type to another as they travel through space."
       },
       {
         "title": "Why Study Neutrinos?",
-        "content": "answer"
+        "content": "We study neutrinos to unlock thier secrets and fully understand the nature of how they interact with matter and their role in the universe. Neutrinos may also help us to understand why there's more matter than antimatter."
       },
       {
         "title": "The DUNE Experiment",
-        "content": "answer"
+        "content": "The Deep Underground Neutrino Experiment (DUNE) is a leading-edge, international experiment for neutrino science."
       }
     ],
     "research": {
       "title": "Neutrino Research at DUNE",
       "paragraphs": [
-        "answer",
-        "answer"
+        "Working on..."
       ]
     }
   }
