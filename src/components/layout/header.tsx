@@ -2,29 +2,46 @@ import React from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { Menu } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-export function Header() {
+interface HeaderProps {
+  toggleSidebar: () => void;
+  isMobile: boolean;
+}
+
+export function Header({ toggleSidebar, isMobile }: HeaderProps) {
   return (
     <header
       className={cn(
-        "sticky top-0 z-30 flex h-24 items-center gap-6 border-b px-8",
+        "sticky top-0 z-30 flex h-16 md:h-24 items-center gap-2 md:gap-6 border-b px-4 md:px-8",
         "w-full bg-[var(--headfoot-background)] shadow-sm"
       )}
     >
-      <div className="flex items-center gap-5 ml-10">
+      {isMobile && (
+        <Button variant="ghost" size="icon" onClick={toggleSidebar} className="mr-2">
+          <Menu className="h-5 w-5" />
+          <span className="sr-only">Toggle menu</span>
+        </Button>
+      )}
+      <div className={cn("flex items-center gap-2 md:gap-5", isMobile ? "ml-0" : "ml-10")}>
         <Image
           src="/dune-rice-logo.png" 
           alt="DUNE Logo"
-          width={52}
-          height={52}
+          width={isMobile ? 40 : 52}
+          height={isMobile ? 40 : 52}
           className="rounded-md"
           priority
         />
         <div>
-          <h1 className="text-3xl font-bold tracking-tight text-primary">DUNE Training Experience Hub</h1>
+          <h1 className={cn("font-bold tracking-tight text-primary", 
+            isMobile ? "text-xl" : "text-3xl"
+          )}>
+            {isMobile ? "DUNE TECH" : "DUNE Training ExperienCe Hub"}
+          </h1>
         </div>
       </div>
-      <div className="ml-auto">
+      <div className="ml-auto flex items-center gap-2">
         <ThemeToggle className="w-auto" />
       </div>
     </header>

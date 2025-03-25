@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: 'standalone',
+  // No basePath needed since this will be the root application
+  trailingSlash: true,
+  poweredByHeader: false,
 };
 
 export default nextConfig;

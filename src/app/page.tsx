@@ -1,7 +1,7 @@
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Database, Server, BookOpen, Calendar, ExternalLink, Users, Atom, LucideIcon } from "lucide-react";
+import { ArrowRight, Database, Server, BookOpen, Calendar, ExternalLink, Users, Atom } from "lucide-react";
 import Link from "next/link";
 import siteContent from "@/data/site-content.json";
 import { ReactNode } from "react";
@@ -32,19 +32,19 @@ export default function Home() {
 
   return (
     <DashboardLayout>
-      <div className="space-y-8">
+      <div className="space-y-6 sm:space-y-8">
         {/* Hero Section */}
-        <div className="relative rounded-lg overflow-hidden bg-gradient-to-r from-primary/10 to-primary/5 p-8">
+        <div className="relative rounded-lg overflow-hidden bg-gradient-to-r from-primary/10 to-primary/5 p-4 sm:p-6 md:p-8">
           <div className="max-w-3xl">
-            <h1 className="text-4xl font-bold tracking-tight mb-4">{homeContent.hero.title}</h1>
-            <p className="text-xl text-muted-foreground mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 md:mb-4">{homeContent.hero.title}</h1>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-4 md:mb-6">
               {homeContent.hero.tagline}
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Button asChild>
+            <div className="flex flex-wrap gap-3 md:gap-4">
+              <Button asChild className="sm:text-base text-sm py-1 sm:py-2">
                 <Link href="/services">Explore Services</Link>
               </Button>
-              <Button variant="outline" asChild>
+              <Button variant="outline" asChild className="sm:text-base text-sm py-1 sm:py-2">
                 <a href={homeContent.about.officialWebsite} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   Learn About DUNE <ExternalLink className="h-4 w-4" />
                 </a>
@@ -55,8 +55,8 @@ export default function Home() {
 
         {/* Quick Access Links */}
         <div>
-          <h2 className="text-2xl font-semibold mb-4">Quick Access</h2>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <h2 className="text-xl sm:text-2xl font-semibold mb-3 md:mb-4">Quick Access</h2>
+          <div className="grid gap-3 sm:gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
             {homeContent.quickLinks.map((link) => (
               <Card key={link.title} className="transition-all hover:shadow-md">
                 <CardHeader className="pb-2">
@@ -89,7 +89,7 @@ export default function Home() {
         </div>
 
         {/* Information Sections */}
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-4 sm:gap-6 grid-cols-1 md:grid-cols-2">
           {/* Latest Updates Section */}
           <Card className="h-full">
             <CardHeader>

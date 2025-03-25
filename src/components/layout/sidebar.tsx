@@ -35,9 +35,10 @@ const SidebarItem = ({ href, icon, title, isActive }: SidebarItemProps) => {
 
 interface SidebarProps {
   isOpen: boolean;
+  isMobile: boolean;
 }
 
-export function Sidebar({ isOpen }: SidebarProps) {
+export function Sidebar({ isOpen, isMobile }: SidebarProps) {
   // Use the pathname to determine the active route
   const pathname = usePathname();
 
@@ -68,10 +69,15 @@ export function Sidebar({ isOpen }: SidebarProps) {
     <aside 
       className={cn(
         "h-full border-r bg-sidebar transition-all duration-300 ease-in-out",
-        isOpen ? "w-64" : "w-0 overflow-hidden"
+        isOpen ? (isMobile ? "w-64 absolute z-20" : "w-64") : "w-0 overflow-hidden"
       )}
     >
       <div className="h-full overflow-y-auto py-4 px-3">
+        {isMobile && isOpen && (
+          <div className="pb-4 mb-2 border-b">
+            <h2 className="text-lg font-semibold px-2">Menu</h2>
+          </div>
+        )}
         <nav className="space-y-1">
           {sidebarItems.map((item) => (
             <div key={item.href} className="mb-1">
