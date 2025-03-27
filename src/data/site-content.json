@@ -1,8 +1,8 @@
 {
   "home": {
     "hero": {
-      "title": "DUNE Training ExperienCe Hub",
-      "tagline": "Advancing neutrino physics research through education, collaboration, and cutting-edge tools."
+      "title": "DUNE TECH",
+      "tagline": "Advancing neutrino science through education, collaboration, and cutting-edge tools that empower students and researchers to engage with the DUNE experiment and the field of neutrinos."
     },
     "quickLinks": [
       {
@@ -13,15 +13,15 @@
         "external": true
       },
       {
-        "title": "Team",
-        "description": "Meet the DUNE collaboration team",
-        "icon": "Users",
-        "href": "/team",
+        "title": "Resources",
+        "description": "Comprehensive guides on training materials and tool",
+        "icon": "BookOpen",
+        "href": "/resources",
         "external": false
       },
       {
         "title": "Services",
-        "description": "Explore all available DUNE services",
+        "description": "Explore all available services provided by DUNE-TECH",
         "icon": "Atom",
         "href": "/services",
         "external": false
@@ -37,18 +37,6 @@
         "title": "New DUNE JupyterHub Release",
         "date": "March 2025",
         "description": "i am a description"
-      }
-    ],
-    "resources": [
-      {
-        "title": "Documentation",
-        "description": "Comprehensive guides for DUNE tools and services",
-        "icon": "BookOpen"
-      },
-      {
-        "title": "Event Calendar",
-        "description": "Stay updated with upcoming workshops and seminars",
-        "icon": "Calendar"
       }
     ],
     "about": {
@@ -77,22 +65,61 @@
       },
       {
         "name": "Calvin Wong",
-        "role": "Web developr and server admin",
+        "role": "Web developer and server admin",
         "image": "/team/placeholder.jpg",
         "bio": "Bio"
       },
       {
-        "name": "Name4",
-        "role": "Role",
+        "name": "Mikayla Bukenya",
+        "role": "Training materials and IT support",
+        "image": "/team/placeholder.jpg",
+        "bio": "Bio"
+      },
+      {
+        "name": "Bo Sung Kim",
+        "role": "Server admin",
         "image": "/team/placeholder.jpg",
         "bio": "Bio"
       }
+
     ]
   },
+  "resources": {
+    "title": "Resources",
+    "subtitle": "Access to key resources and training materials",
+    "mainServices": [
+      {
+        "title": "DUNE-TECH Youtube channel",
+        "description": "Introductory videos",
+        "buttonText": "DUNE-TECH youtube",
+        "buttonLink": "https://www.youtube.com/@DvNE-TECH"
+      },
+      {
+        "title": "Software Carpentry",
+        "description": "Software carpentry lessons",
+        "buttonText": "Lessons",
+        "buttonLink": "https://software-carpentry.org/lessons/"
+      },
+      {
+        "title": "Software Foundation and IRIS-HEP",
+        "description": "HSF Training Center",
+        "buttonText": "HSF Training Center",
+        "buttonLink": "https://hsf-training.org/training-center/"
+      }
+    ]
+  }, 
   "services": {
     "title": "DUNE Services",
     "subtitle": "Access key DUNE services and resources to support your research and learning.",
     "mainServices": [
+     {
+        "title": "JupyterHub",
+        "description": "Run Jupyter notebooks on the Rice DUNE server with pre-configured environments for data analysis.",
+        "icon": "Server",
+        "details": "JupyterHub provides a collaborative environment for data analysis, visualization, and machine learning. Access computing resources, shared libraries, and DUNE datasets directly from your browser.",
+        "buttonText": "Launch JupyterHub",
+        "buttonLink": "https://dune-tech.rice.edu/jupyterhub/"
+      },
       {
         "title": "DUNE Catalog",
         "description": "Query and access datasets from the DUNE Metacat database. Find experiment data, analysis results, and more.",
@@ -100,33 +127,31 @@
         "details": "The DUNE Catalog provides a user-friendly interface to search, filter, and download datasets from the DUNE experiment. Access metadata, file locations, and dataset descriptions to accelerate your research.",
         "buttonText": "Access DUNE Catalog",
         "buttonLink": "https://dune-tech.rice.edu/dunecatalog/"
-      },
-      {
-        "title": "JupyterHub",
-        "description": "Run Jupyter notebooks on the Rice DUNE server with pre-configured environments for data analysis.",
-        "icon": "Server",
-        "details": "JupyterHub provides a collaborative environment for data analysis, visualization, and machine learning. Access computing resources, shared libraries, and DUNE datasets directly from your browser.",
-        "buttonText": "Launch JupyterHub",
-        "buttonLink": "https://dune-tech.rice.edu/jupyterhub/"
-      }
-    ],
-    "additionalServices": [
-      {
-        "title": "Training Workshops",
-        "description": "Comprehensive workshops on neutrino physics, detector technology, and data analysis.",
-        "icon": "BookOpen"
-      },
-      {
-        "title": "Documentation",
-        "description": "Access to educational materials, publications, and learning resources for all levels.",
-        "icon": "BookOpen"
       }
     ]
   },
+  "services": {
+    "title": "DUNE-TECH Programs",
+    "subtitle": "Workforce and career development programs ",
+    "mainServices": [
+     {
+        "title": "DUNE Undergraduate Program",
+        "details": "This is a unique opportunity where student-faculty pairs work together throughout the spring semester, followed by a 10-week summer research program, which includes a one-week school at Rice University. During the spring semester, the emphasis will be on preparing the student for research, focusing on foundational computational training and basic particle physics concepts. This training can be conducted through coursework or independent study directed by the faculty. Students are expected to dedicate 8 hours per week to this preparation and will receive financial compensation for their time.",
+        "buttonText": "Apply",
+        "buttonLink": ""
+      },
+      {
+        "title": "DUNE Early-career Researcher Program",
+        "details": "This program is designed to provide support to early-career researchers, including graduate students and postdocs, to participate in in-person activities that contribute to their career development and align with current or future projects within the Core Software and Computing Consortium.",
+        "buttonText": "Apply",
+        "buttonLink": ""
+      }
+    ]
+  },
+ 
   "aboutNeutrinos": {
     "title": "About Neutrinos",
     "subtitle": "Learn about these fascinating subatomic particles and why they're important to physics.",
-    "introduction": "introduction",
     "facts": [
       {
         "title": "What are Neutrinos?",
