@@ -37,16 +37,13 @@ export default function Home() {
         <div className="relative rounded-lg overflow-hidden bg-gradient-to-r from-primary/10 to-primary/5 p-4 sm:p-6 md:p-8">
           <div className="max-w-3xl">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-3 md:mb-4">{homeContent.hero.title}</h1>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-4 md:mb-6">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-4 md:mb-6 whitespace-pre-line">
               {homeContent.hero.tagline}
             </p>
             <div className="flex flex-wrap gap-3 md:gap-4">
-              <Button asChild className="sm:text-base text-sm py-1 sm:py-2">
-                <Link href="/services">Explore Services</Link>
-              </Button>
-              <Button variant="outline" asChild className="sm:text-base text-sm py-1 sm:py-2">
+              <Button variant="outline" asChild className="sm:text-base text-sm py-1 sm:py-2 whitespace-pre-line">
                 <a href={homeContent.about.officialWebsite} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                  Learn About DUNE <ExternalLink className="h-4 w-4" />
+                  Learn more about the DUNE experiment <ExternalLink className="h-4 w-4" />
                 </a>
               </Button>
             </div>
@@ -86,68 +83,6 @@ export default function Home() {
               </Card>
             ))}
           </div>
-        </div>
-
-        {/* Information Sections */}
-        <div className="grid gap-4 sm:gap-6 grid-cols-1 md:grid-cols-2">
-          {/* Latest Updates Section */}
-          <Card className="h-full">
-            <CardHeader>
-              <CardTitle>Latest Updates</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                {homeContent.latestUpdates.map((update, index) => (
-                  <div key={index} className="border-l-4 border-primary pl-4 py-2">
-                    <p className="font-medium">{update.title}</p>
-                    <p className="text-sm text-muted-foreground">{update.date}</p>
-                    <p className="mt-1 text-sm">{update.description}</p>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Resources Section */}
-          <Card className="h-full">
-            <CardHeader>
-              <CardTitle>Resources</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-3">
-                {homeContent.resources.map((resource, index) => (
-                  <div key={index} className="flex items-start gap-2">
-                    {getIcon(resource.icon)}
-                    <div>
-                      <p className="font-medium">{resource.title}</p>
-                      <p className="text-sm text-muted-foreground">{resource.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* About DUNE */}
-        <div>
-          <Card>
-            <CardHeader>
-              <CardTitle>{homeContent.about.title}</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              {homeContent.about.paragraphs.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-              ))}
-            </CardContent>
-            <CardFooter>
-              <Button variant="outline" size="sm" asChild>
-                <a href={homeContent.about.officialWebsite} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                  Visit Official DUNE Website <ExternalLink className="h-4 w-4" />
-                </a>
-              </Button>
-            </CardFooter>
-          </Card>
         </div>
       </div>
     </DashboardLayout>
