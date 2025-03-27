@@ -9,12 +9,6 @@ interface IconMapType {
 }
 
 // Icon mapping to dynamically render icons from the JSON data
-const IconMap: IconMapType = {
-  Database: <Database className="h-10 w-10 text-primary" />,
-  Server: <Server className="h-10 w-10 text-primary" />,
-  BookOpen: <BookOpen className="h-8 w-8 text-primary" />
-};
-
 export default function ServicesPage() {
   // Get resources content from the site content
   const resourcesContent = siteContent.resources;
