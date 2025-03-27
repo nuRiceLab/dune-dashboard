@@ -37,7 +37,7 @@ export function Header({ toggleSidebar, isMobile }: HeaderProps) {
           <h1 className={cn("font-bold tracking-tight text-primary", 
             isMobile ? "text-xl" : "text-3xl"
           )}>
-            {isMobile ? "DUNE TECH" : "DUNE Training ExperienCe Hub"}
+            {isMobile ? "DUNE TECH" : "DUNE Training ExperienCe Hub (DUNE-TECH)"}
           </h1>
         </div>
       </div>

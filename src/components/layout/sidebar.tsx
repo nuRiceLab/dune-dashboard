@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Home, Users, Briefcase, BookOpen } from "lucide-react";
+import { Home, Users, Briefcase, BookOpen, Server } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
@@ -49,9 +49,14 @@ export function Sidebar({ isOpen, isMobile }: SidebarProps) {
       title: "Home",
     },
     {
-      href: "/team",
-      icon: <Users size={20} />,
-      title: "Team",
+      href: "/programs",
+      icon: <BookOpen size={20} />,
+      title: "Programs",
+    },
+    {
+      href: "/resources",
+      icon: <Server size={20} />,
+      title: "Resources",
     },
     {
       href: "/services",
@@ -63,6 +68,11 @@ export function Sidebar({ isOpen, isMobile }: SidebarProps) {
       icon: <BookOpen size={20} />,
       title: "About Neutrinos",
     },
+    {
+      href: "/team",
+      icon: <Users size={20} />,
+      title: "Team",
+    }
   ];
 
   return (
