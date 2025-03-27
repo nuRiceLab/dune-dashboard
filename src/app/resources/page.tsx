@@ -19,10 +19,6 @@ export default function ServicesPage() {
   // Get resources content from the site content
   const resourcesContent = siteContent.resources;
 
-  // Helper function to get the icon component based on the icon name
-  const getIcon = (iconName: string): ReactNode => {
-    return IconMap[iconName] || null;
-  };
   return (
   <DashboardLayout>
     <div className="space-y-8">
