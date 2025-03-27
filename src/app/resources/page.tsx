@@ -1,14 +1,8 @@
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
-import { Database, BookOpen, Server, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import siteContent from "@/data/site-content.json";
 
-// Define types for the JSON data
-interface IconMapType {
-  [key: string]: ReactNode;
-}
-
-// Icon mapping to dynamically render icons from the JSON data
 export default function ServicesPage() {
   // Get resources content from the site content
   const resourcesContent = siteContent.resources;
