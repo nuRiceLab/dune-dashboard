@@ -1,6 +1,6 @@
 import { DashboardLayout } from "@/components/layout/dashboard-layout";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
-import { Database, BookOpen, Server, ExternalLink, Image as ImageIcon } from "lucide-react";
+import { Database, BookOpen, Server, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import siteContent from "@/data/site-content.json";
 import { ReactNode } from "react";
