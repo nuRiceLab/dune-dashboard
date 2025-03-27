@@ -17,9 +17,6 @@ export default function AboutNeutrinosPage() {
         </div>
 
         <div className="prose max-w-none dark:prose-invert">
-          <p className="lead">
-            {neutrinosContent.introduction}
-          </p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
