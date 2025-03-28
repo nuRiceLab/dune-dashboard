@@ -19,7 +19,7 @@ const IconMap: IconMapType = {
 
 export default function ServicesPage() {
   // Get services content from the site content
-  const servicesContent = siteContent.services;
+  const servicesContent = siteContent.programs;
 
   // Helper function to get the icon component based on the icon name
   const getIcon = (iconName: string): ReactNode => {
