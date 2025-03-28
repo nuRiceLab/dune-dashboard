@@ -39,12 +39,9 @@ export default function ServicesPage() {
           {servicesContent.mainServices.map((service) => (
             <Card key={service.title} className="flex flex-col h-full overflow-hidden">
   <CardHeader className="pb-4">
-    <div className="flex items-center gap-4">
-      {getIcon(service.icon)}
-      <div>
+    <div>
         <CardTitle className="text-xl">{service.title}</CardTitle>
         <CardDescription className="mt-1">{service.description}</CardDescription>
-      </div>
     </div>
   </CardHeader>
   <CardContent className="flex-grow">
