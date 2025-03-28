@@ -10,21 +10,9 @@ interface IconMapType {
   [key: string]: ReactNode;
 }
 
-// Icon mapping to dynamically render icons from the JSON data
-const IconMap: IconMapType = {
-  Database: <Database className="h-10 w-10 text-primary" />,
-  Server: <Server className="h-10 w-10 text-primary" />,
-  BookOpen: <BookOpen className="h-8 w-8 text-primary" />
-};
-
 export default function ServicesPage() {
   // Get services content from the site content
   const servicesContent = siteContent.programs;
-
-  // Helper function to get the icon component based on the icon name
-  const getIcon = (iconName: string): ReactNode => {
-    return IconMap[iconName] || null;
-  };
 
   return (
     <DashboardLayout>
