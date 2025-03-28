@@ -3,7 +3,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import siteContent from "@/data/site-content.json";
-import { ReactNode } from "react";
 
 export default function ServicesPage() {
   // Get services content from the site content
