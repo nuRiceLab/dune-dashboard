@@ -23,7 +23,6 @@ export default function ServicesPage() {
   <CardHeader className="pb-4">
     <div>
         <CardTitle className="text-xl">{service.title}</CardTitle>
-        <CardDescription className="mt-1">{service.description}</CardDescription>
     </div>
   </CardHeader>
   <CardContent className="flex-grow">
