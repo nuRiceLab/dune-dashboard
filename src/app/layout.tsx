@@ -10,8 +10,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "DUNE Training Experience Hub",
-  description: "Dashboard for the DUNE Training Experience Hub",
+  title: "DUNE Training ExperienCe Hub",
+  description: "Dashboard for the DUNE Training ExperienCe Hub",
 };
 
 export default function RootLayout({
