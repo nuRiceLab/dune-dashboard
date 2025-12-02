@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Menu } from "lucide-react";
@@ -25,13 +24,12 @@ export function Header({ toggleSidebar, isMobile }: HeaderProps) {
         </Button>
       )}
       <div className={cn("flex items-center gap-2 md:gap-5", isMobile ? "ml-0" : "ml-10")}>
-        <Image
-          src="/dune-rice-logo.png" 
+        <img
+          src="/dune-rice-logo.png"
           alt="DUNE Logo"
           width={isMobile ? 40 : 52}
           height={isMobile ? 40 : 52}
-          className="rounded-md"
-          priority
+          className="rounded-md object-contain"
         />
         <div>
           <h1 className={cn("font-bold tracking-tight text-primary", 

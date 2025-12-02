@@ -58,30 +58,11 @@
         "bio": "Bio"
       },
       {
-        "name": "Christopher Tunnell",
-        "role": "co-PI",
-        "image": "/team/placeholder.jpg",
-        "bio": "Bio"
-      },
-      {
         "name": "Calvin Wong",
         "role": "Web developer and server admin",
         "image": "/team/placeholder.jpg",
         "bio": "Bio"
-      },
-      {
-        "name": "Mikayla Bukenya",
-        "role": "Training materials and IT support",
-        "image": "/team/placeholder.jpg",
-        "bio": "Bio"
-      },
-      {
-        "name": "Bo Sung Kim",
-        "role": "Server admin",
-        "image": "/team/placeholder.jpg",
-        "bio": "Bio"
       }
-
     ]
   },
   "resources": {
@@ -138,13 +119,13 @@
         "title": "DUNE Undergraduate Program",
         "details": "This is a unique opportunity where student-faculty pairs work together throughout the spring semester, followed by a 10-week summer research program, which includes a one-week school at Rice University. During the spring semester, the emphasis will be on preparing the student for research, focusing on foundational computational training and basic particle physics concepts. This training can be conducted through coursework or independent study directed by the faculty. Students are expected to dedicate 8 hours per week to this preparation and will receive financial compensation for their time.",
         "buttonText": "Apply",
-        "buttonLink": ""
+        "buttonLink": "https://dunepier.rice.edu"
       },
       {
         "title": "DUNE Early-career Researcher Program",
         "details": "This program is designed to provide support to early-career researchers, including graduate students and postdocs, to participate in in-person activities that contribute to their career development and align with current or future projects within the Core Software and Computing Consortium.",
         "buttonText": "Apply",
-        "buttonLink": ""
+        "buttonLink": "https://forms.gle/tcFUM3EYtBTQDBxU8"
       }
     ]
   },
